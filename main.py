@@ -5,10 +5,11 @@ from selenium.webdriver.common.by import By
 from time import sleep
 
 options = Options()
-options.add_experimental_option("excludeSwitches", ['enable-logging'])
-options.add_argument(r'--user-data-dir=./chromeUserOne')
+#options.add_experimental_option("excludeSwitches", ['enable-logging'])
+options.add_argument(r"--user-data-dir=./chromeUserTwo")
 
-driver = webdriver.Chrome("../chromedriver.exe", options=options)
+path = r'C:\Users\toele\python-projects\chromedriver.exe'
+driver = webdriver.Chrome(path, options=options)
 driver.get('https://emeraldcity2residents.buildinglink.com/v2/tenant/amenities/availabilitygrid.aspx')
 
 #time = driver.find_elements_by_class_name('ReservationGridRowHeader-Inner')
